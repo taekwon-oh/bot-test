@@ -13,6 +13,9 @@ module.exports = (robot) ->
   robot.respond /おはよう/i, (msg) ->
     msg.send "おはようございます！"
 
+  robot.respond /create report (.+?) (.+)/i, (msg) ->
+    msg.send "#{msg}"
+
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
