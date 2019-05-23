@@ -13,8 +13,11 @@ module.exports = (robot) ->
   robot.respond /おはよう/i, (msg) ->
     msg.send "おはようございます！"
 
+  robot.respond /help/i, (msg) ->
+    msg.send "create report クライアント名 日付"
+
   robot.respond /create report (.+?) (.+)/i, (msg) ->
-    msg.send "#{msg}"
+    msg.send "#{msg.match[1]} #{msg.match[2]}"
 
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
